@@ -1,18 +1,31 @@
-package com.shop.model;
+package com.shop.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by EgorPC on 16.03.2017.
  */
+@Entity
+@Table(name="PRODUCT")
 public class Product implements Serializable {
 
+    private Long id;
     private String code;
     private String name;
     private double price;
     private byte[] image;
     private Date createDate;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getCode() {
         return code;

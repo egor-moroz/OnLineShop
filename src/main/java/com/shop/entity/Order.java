@@ -1,13 +1,17 @@
-package com.shop.model;
+package com.shop.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * Created by EgorPC on 16.03.2017.
  */
+@Entity
+@Table(name="ORDER")
 public class Order {
 
-    private String id;
+    private Long id;
     private Date orderDate;
     private int orderNum;
     private double amount;
@@ -17,11 +21,11 @@ public class Order {
     private String customerEmail;
     private String customerPhone;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
