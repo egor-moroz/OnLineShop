@@ -4,6 +4,7 @@ package com.shop.model;
  * Created by EgorPC on 18.03.2017.
  */
 public class CartLineInfo {
+
     private ProductInfo productInfo;
     private int quantity;
 
